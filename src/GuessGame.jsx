@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import { Player } from "./Players"
-
+import './App.css'
 
 function PickAHand() {
    const [result, setResult] = useState(null)
@@ -27,20 +26,13 @@ function PickAHand() {
 
     return (
         <>
-            
-
-
             <h2>Pick A Hand Any Hand</h2>
             <button onClick={() => isThisHand('Left Hand')}>Left Hand</button>
             <button onClick={() => isThisHand('Right Hand')}>Right Hand</button>
             <p>You picked {selectedHand}</p>
             <p>Answer: {result}</p>
-            <Player 
-                name="P1"
-                result={scoreP1}
-                addPoint={addPoint}
-             />
-             <p>Total Rounds played: {count}</p>
+            <p>Score: {scoreP1}</p>
+            <p>Total Rounds played: {count}</p>
         </>
     )
 }
