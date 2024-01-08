@@ -7,6 +7,7 @@ import { LessonTest } from './Players.jsx'
 import TodoList from './TodoList.jsx'
 import Bio from './Bio.jsx'
 import { Avatar } from './Avatar.jsx'
+import { Animals } from './Animals.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,5 +17,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    <TodoList />
    <Bio />
    <Avatar />
+   <Animals />
   </React.StrictMode>,
 )
