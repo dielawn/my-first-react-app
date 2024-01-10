@@ -50,6 +50,27 @@ function SearchByLetter(props) {
 
 }
 
+function Lists(props) {
+    
+    return (
+        <>
+        {!props.animals ? (
+            <div>Loading...</div>
+        ) : props.animals.length > 0 ? (
+            <ul>
+            {props.animals.map((animal) => {
+                return <li key={animal}>{animal}</li>
+            })}
+        </ul>
+        ) : (
+            <div>There are no animals listed!</div>
+        )}
+        
+
+        </>
+    )
+}
+
 export function Animals() {
     const [animals, setAnimals]= useState(['Lion', 'Cow', 'Snake', 'Lizard'])
    
@@ -59,6 +80,7 @@ export function Animals() {
             <List animals={animals} />
             <ListByLetter animals={animals}/>
             <SearchByLetter animals={animals} />
+            <Lists  animals={animals}/>
         </div>
     )
 }
