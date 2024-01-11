@@ -40,7 +40,7 @@ function SearchByLetter(props) {
            
             <ul>
                 { props.animals
-                .filter((animal) => animal.startsWith(searchInput))
+                .filter((animal) => animal.toLowerCase().startsWith(searchInput))
                 .map((animal) => (
             <li key={animal}>{animal}</li>
         ))}
@@ -50,8 +50,9 @@ function SearchByLetter(props) {
 
 }
 
+    //conditional 
 function Lists(props) {
-    
+
     return (
         <>
         {!props.animals ? (
