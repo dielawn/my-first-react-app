@@ -8,6 +8,8 @@ import TodoList from './TodoList.jsx'
 import Bio from './Bio.jsx'
 import { Avatar } from './Avatar.jsx'
 import { Animals } from './Animals.jsx'
+import { CreateList } from './Arrays.jsx'
+import { ArrayFilter } from './FilterArray.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -18,5 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    <Bio />
    <Avatar />
    <Animals />
+<CreateList />
+<ArrayFilter />
   </React.StrictMode>,
 )

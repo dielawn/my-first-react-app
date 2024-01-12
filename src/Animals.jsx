@@ -94,37 +94,36 @@ function Item1({ name, importance }) {
   }
 
   function Drink({ name }) {
-    const drinks = [
-        {
-            name: 'Tea',
+
+    const drinks = {
+        tea: {
+            
             plantPart: 'Leaf',
             caffeine: '15-70 mg/cup',
             age: '4,000+ years'
         },
-        {
-            name: 'Coffee',
+        coffee: {
+            
             plantPart: 'Bean',
             caffeine: '80-185 mg/cup',
             age: '1,000+ years'
         }
-    ]
-    for(let i = 0; i < drinks.length; i++) {
-        if (name === drinks[i].name.toLocaleLowerCase()) {
-            return (
-                <section>
-                  <h1>{drinks[i].name}</h1>
+  }
+  const info = drinks[name] 
+  return (
+    <section>
+                  <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
                   <dl>
                     <dt>Part of plant</dt>
-                    <dd>{drinks[i].plantPart}</dd>
+                    <dd>{info.plantPart}</dd>
                     <dt>Caffeine content</dt>
-                    <dd>{drinks[i].caffeine}</dd>
+                    <dd>{info.caffeine}</dd>
                     <dt>Age</dt>
-                    <dd>{drinks[i].age}</dd>
+                    <dd>{info.age}</dd>
                   </dl>
                 </section>
-            )
-        }   
-    }    
+  )
+   
   }
   
 function DrinkList() {
