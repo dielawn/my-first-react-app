@@ -72,6 +72,94 @@ function Lists(props) {
     )
 }
 
+function Item({ name, isPacked}) {
+   return <li className="item">{isPacked? <del> {name}✔</del> : name}</li>    
+}
+function PackingList() {
+    return (
+        <section>
+            <h1>Sally Rides's Packing List</h1>
+            <ul>
+                <Item isPacked={true} name="Space suit" />
+                <Item isPacked={true} name="Helment with a golden leaf" />
+                <Item isPacked={false} name="Photo of Tam" />
+            </ul>
+        </section>
+    )
+}
+
+function Item1({ name, importance }) {
+    let isImportant = importance > 0
+    return <li className="item">{isImportant? <em>{name}  Importance: {importance}</em>  : name}</li>    
+  }
+
+  function Drink({ name }) {
+    const drinks = [
+        {
+            name: 'Tea',
+            plantPart: 'Leaf',
+            caffeine: '15-70 mg/cup',
+            age: '4,000+ years'
+        },
+        {
+            name: 'Coffee',
+            plantPart: 'Bean',
+            caffeine: '80-185 mg/cup',
+            age: '1,000+ years'
+        }
+    ]
+    for(let i = 0; i < drinks.length; i++) {
+        if (name === drinks[i].name.toLocaleLowerCase()) {
+            return (
+                <section>
+                  <h1>{drinks[i].name}</h1>
+                  <dl>
+                    <dt>Part of plant</dt>
+                    <dd>{drinks[i].plantPart}</dd>
+                    <dt>Caffeine content</dt>
+                    <dd>{drinks[i].caffeine}</dd>
+                    <dt>Age</dt>
+                    <dd>{drinks[i].age}</dd>
+                  </dl>
+                </section>
+            )
+        }   
+    }    
+  }
+  
+function DrinkList() {
+    return (
+      <div>
+        <Drink name="tea" />
+        <Drink name="coffee" />
+      </div>
+    );
+  }
+  
+  
+  export default function PackingList2() {
+    return (
+      <section>
+        <h1>Sally Ride's Packing List</h1>
+        <ul>
+          <Item1 
+            importance={9} 
+            name="Space suit" 
+          />
+          <Item1 
+            importance={0} 
+            name="Helmet with a golden leaf" 
+          />
+          <Item1 
+            importance={6} 
+            name="Photo of Tam" 
+          />
+        </ul>
+      </section>
+    );
+  }
+  
+
 export function Animals() {
     const [animals, setAnimals]= useState(['Lion', 'Cow', 'Snake', 'Lizard'])
    
@@ -82,6 +170,9 @@ export function Animals() {
             <ListByLetter animals={animals}/>
             <SearchByLetter animals={animals} />
             <Lists  animals={animals}/>
+            <PackingList />
+            <PackingList2 />
+            <DrinkList />
         </div>
     )
 }
