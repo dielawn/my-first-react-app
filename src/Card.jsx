@@ -11,7 +11,11 @@ export function CardProfile({el}) {
     return (       
         <>
           <Card>
-           {el}
+            {el && (
+                    <div className="el">
+                        {el}
+                    </div>
+                )}
           </Card>     
        </>        
     )

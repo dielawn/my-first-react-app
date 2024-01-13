@@ -18,17 +18,15 @@ export function Avatar() {
         ).format(date)
     }
 
-    return (
-     
-       <div style={person.theme}>
-        <img src={avatar} alt={desc} className="avatar" />
-        <h1>{person.name}'s To Do List for {formatDate(today)}</h1>
-        <ul>
-      <li>Improve the videophone</li>
-      <li>Prepare aeronautics lectures</li>
-      <li>Work on the alcohol-fuelled engine</li>
-    </ul>
-    </div>
-       
+    return (     
+        <div style={person.theme}>
+            <img src={avatar} alt={desc} className="avatar" />
+            <h1>{person.name}'s To Do List for {formatDate(today)}</h1>
+            <ul>
+                <li>Improve the videophone</li>
+                <li>Prepare aeronautics lectures</li>
+                <li>Work on the alcohol-fuelled engine</li>
+            </ul>
+        </div>       
     )
 }

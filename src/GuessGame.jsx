@@ -11,8 +11,7 @@ function PickAHand() {
         if (result != null && selectedHand != null && result === selectedHand) {
                 setScore((prevScore) => prevScore + 1)    
         }             
-   }
-   
+   }  
   
     const isThisHand = (txt) => {
        const rndmResult = Math.random() > .5 ? `Left Hand` : `Right Hand`

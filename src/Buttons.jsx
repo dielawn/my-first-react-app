@@ -32,7 +32,7 @@ export function Buttons() {
     
     return (
         <div>
-            <Button handleClick={ () => handleButtonClick('https://www.google.com')} />
+            <Button handleClick={() => handleButtonClick('https://www.google.com')} />
             <Button className="danger" text="Not this One!" color="black" fontSize={12} />
             <Button handleClick={() => handleButtonClick('https://www.example.com')} text="This should be ok!" color="aqua" bgColor="black" fontSize={20} />
         </div>
