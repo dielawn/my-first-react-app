@@ -11,6 +11,7 @@ import { Animals } from './Animals.jsx'
 import { CreateList } from './Arrays.jsx'
 import { ArrayFilter } from './FilterArray.jsx'
 import { Poem } from './Poem.jsx'
+import { Buttons } from './Buttons.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -24,5 +25,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 <CreateList />
 <ArrayFilter />
 <Poem />
+<Buttons />
   </React.StrictMode>,
 )
