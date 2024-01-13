@@ -10,6 +10,7 @@ import { Avatar } from './Avatar.jsx'
 import { Animals } from './Animals.jsx'
 import { CreateList } from './Arrays.jsx'
 import { ArrayFilter } from './FilterArray.jsx'
+import { Poem } from './Poem.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -22,5 +23,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    <Animals />
 <CreateList />
 <ArrayFilter />
+<Poem />
   </React.StrictMode>,
 )

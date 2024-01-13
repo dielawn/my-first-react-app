@@ -35,7 +35,19 @@ const recipes = [{
     
 }]
 
+const poem = {
+    title: 'Ode to the Taint a haiku',
+    lines: [
+      'Bacon strip of skin',
+      'Unresponsive to my hand',
+      'How I love thee still.'
+    ],
+    author: 'Wiggins'
+  };
+
 export {
     recipes,
-    people
+    people,
+    poem,
+
 }
