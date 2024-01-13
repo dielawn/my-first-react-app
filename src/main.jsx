@@ -12,6 +12,9 @@ import { CreateList } from './Arrays.jsx'
 import { ArrayFilter } from './FilterArray.jsx'
 import { Poem } from './Poem.jsx'
 import { Buttons } from './Buttons.jsx'
+import { Profile } from './Image.jsx'
+import { CardProfile } from './Card.jsx'
+import Gallery from './Gallery.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -26,5 +29,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 <ArrayFilter />
 <Poem />
 <Buttons />
+<Profile />
+<CardProfile />
+<Gallery />
+
+
   </React.StrictMode>,
+
 )

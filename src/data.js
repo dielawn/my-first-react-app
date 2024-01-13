@@ -45,9 +45,27 @@ const poem = {
     author: 'Wiggins'
   };
 
+  const scientists = [
+    {
+      name: "Maria Skłodowska-Curie",
+      profession: 'physicist and chemist',
+      awards: ['Nobel Prize in Physics', 'Nobel Prize in Chemistry', 'Davy Medal', 'Matteucci Medal'],
+      discoveries: 'polonium (chemical element)',
+      imgId:'szV5sdG'
+
+    },
+    {
+      name: "Katsuko Saruhashi",
+      profession: 'geochemist',
+      awards: ['Miyake Prize for geochemistry', 'Tanaka Prize'],     
+      discoveries: 'a method for measuring carbon dioxide in seawater',
+      imgId: 'YfeOqp2'
+    }
+  ]
+
 export {
     recipes,
     people,
     poem,
-
+    scientists
 }
